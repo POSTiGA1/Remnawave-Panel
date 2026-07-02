@@ -83,7 +83,7 @@ Remnawave is using these headers to identify the HWID and the device.
 To enable support for the HWID feature in your client, the application should send the following headers when the user is adding the subscription.
 
 ```bash
-x-hwid: vfjdhk66csdjhk
+x-hwid: vfjdhk66csdjhk (minimum 6 characters)
 x-device-os: iOS
 x-ver-os: 18.3
 x-device-model: Iphone 14 Pro Max
