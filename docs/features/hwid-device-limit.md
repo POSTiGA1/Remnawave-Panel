@@ -86,9 +86,9 @@ To enable support for the HWID feature in your client, the application should se
 
 :::warning
 Starting from Remnawave Panel **v2.9.0**, the incoming `x-hwid` header is
-validated against the regular expression `/^[a-zA-Z0-9-]{16,64}$/`.
+validated against the regular expression `/^[a-zA-Z0-9-]{10,64}$/`.
 
-In simple terms: the HWID must be 16 to 64 characters long and may only
+In simple terms: the HWID must be 10 to 64 characters long and may only
 contain Latin letters, digits, and hyphens.
 
 If the HWID does not match, Remnawave ignores the header entirely.
