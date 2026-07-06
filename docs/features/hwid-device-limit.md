@@ -82,8 +82,20 @@ Remnawave is using these headers to identify the HWID and the device.
 
 To enable support for the HWID feature in your client, the application should send the following headers when the user is adding the subscription.
 
+### HWID Format
+
+:::warning
+Starting from Remnawave Panel **v2.9.0**, the incoming `x-hwid` header is
+validated against the regular expression `/^[a-zA-Z0-9-]{16,64}$/`.
+
+In simple terms: the HWID must be 16 to 64 characters long and may only
+contain Latin letters, digits, and hyphens.
+
+If the HWID does not match, Remnawave ignores the header entirely.
+:::
+
 ```bash
-x-hwid: vfjdhk66csdjhk (minimum 6 characters)
+x-hwid: UE42LJXu4DbiCaBv
 x-device-os: iOS
 x-ver-os: 18.3
 x-device-model: Iphone 14 Pro Max
